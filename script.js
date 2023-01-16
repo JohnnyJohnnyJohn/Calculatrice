@@ -13,36 +13,37 @@ function clear() {
     resultat = false;
     onCalcul = false;
     virgule = false;
+    document.getElementById(operateur).className = "";
     operateur = "";
 }
 
 function calcul(op){
     switch (op) {
-        case "/":
+        case "divise":
             resultat /= parseFloat(text.value);
             text.value = resultat;
             isTyping = false;
             break;
         
-        case "-":
+        case "soustrait":
             resultat -= parseFloat(text.value);
             text.value = resultat;
             isTyping = false;
             break;
 
-        case "+":
+        case "add":
             resultat += parseFloat(text.value);
             text.value = resultat;
             isTyping = false;
             break;
 
-        case "*":
+        case "fois":
             resultat *= parseFloat(text.value);
             text.value = resultat;
             isTyping = false;
             break;
 
-        case "%":
+        case "mod":
             resultat %= parseFloat(text.value);
             text.value = resultat;
             isTyping = false;
@@ -56,66 +57,82 @@ function calcul(op){
 function checkOp(id){
     switch (id) {
         case "divise":
+            document.getElementById(id).className = "pink";
+
             if (!onCalcul) {                
-                operateur = "/";
+                operateur = "divise";
                 resultat = parseFloat(text.value);
                 onCalcul = true;
                 isTyping = false;
             } else {
+                document.getElementById(operateur).className = "";
                 calcul(operateur);
-                operateur = "/";
+                operateur = "divise";
             }                    
             break;
         
         case "soustrait":
+            document.getElementById(id).className = "pink";
+
             if (!onCalcul) {
-                operateur = "-";
+                operateur = "soustrait";
                 resultat = parseFloat(text.value);
                 onCalcul = true;
                 isTyping = false;
             } else {
+                document.getElementById(operateur).className = "";
                 calcul(operateur);
-                operateur = "-";
+                operateur = "soustrait";
             }                    
             break;
 
         case "add":
+            document.getElementById(id).className = "pink";
+
             if (!onCalcul) {
-                operateur = "+";
+                operateur = "add";
                 resultat = parseFloat(text.value);
                 onCalcul = true;
                 isTyping = false;
             } else {
+                document.getElementById(operateur).className = "";
                 calcul(operateur);
-                operateur = "+";
+                operateur = "add";
             }                    
             break;
 
         case "fois":
+            document.getElementById(id).className = "pink";
+
             if (!onCalcul) {
-                operateur = "*";
+                operateur = "fois";
                 resultat = parseFloat(text.value);
                 onCalcul = true;
                 isTyping = false;
             } else {
+                document.getElementById(operateur).className = "";
                 calcul(operateur);
-                operateur = "*";
+                operateur = "fois";
             }                    
             break;
             
         case "mod":
+            document.getElementById(id).className = "pink";
+
             if (!onCalcul) {
-                operateur = "%";
+                operateur = "mod";
                 resultat = parseFloat(text.value);
                 onCalcul = true;
                 isTyping = false;
             } else {
+                document.getElementById(operateur).className = "";
                 calcul(operateur);
-                operateur = "%";
+                operateur = "mod";
             }                    
             break;
             
         default:
+            document.getElementById(operateur).className = "";
             calcul(operateur);
             operateur = "";
             onCalcul = false;
