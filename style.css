@@ -1,47 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+
+@font-face {
+    font-family: 'LCD Normal';
+    font-style: normal;
+    font-weight: normal;
+    src: local('LCD Normal'), url('LCD-N___.woff') format('woff');
+}
+
 * {
-    font-family: Helvetica, sans-serif;
-    font-size: 20px;
+    font-family: 'Quicksand', Helvetica, sans-serif;
+    font-size: 32px;
     margin: 0;
 }
 
-
-
 body {
-    background-color: #e74c3c;
-    animation: bg-color 10s infinite;
-  }
-  @keyframes bg-color {
-    0% { background-color: #e74c3c; }
-    20% { background-color: #f1c40f; }
-    40% { background-color: #1abc9c; }
-    60% { background-color: #3498db; }
-    80% { background-color: #9b59b6; }
-    100% { background-color: #e74c3c; }
-  }
+    background-image: url(bg.jpg);
+    background-size: 100vw 100vh;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 20vh;
+    text-align: center;
+    z-index: -1;
+}
+
+h1 {
+    color: #ffffff;
+    background-image: -webkit-linear-gradient(270deg, #00c8ff,#0091c4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'LCD Normal';
+    font-size: 96px;
+    margin-top: 2vh;
+}
 
 button {
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 3px;
     border-width: 0;
     text-align: center;
-    background-color: #64278f;
+    background-image: linear-gradient(to bottom, #4f4f4f, #404040, #323232, #252525, #181818);
     color: white;
     box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    transition: all 0.2s ease;
 }
 
 button:active {
-   transform: scale(0.98);
+   transform: scale(0.95);
    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 input {
-    width: 98.75%;
-    padding: 6px 0;
+    font-family: 'LCD Normal';
+    font-size: 32px;
+    width: 98.2%;
+    padding: 21px 0;
     text-align: right;
+    background-image: linear-gradient(to bottom, #72cb52, #6cbb4b, #65ac45, #5e9d3f, #578e39);
+    border-radius: 3px;
+    border-width: 0px;
+    padding-right: 5px;
 }
 
 .container {
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,21 +78,20 @@ input {
 
 .parent {
     display: grid;
-    grid-template-columns: repeat(2, 80px) repeat(3, 40px);
-    grid-template-rows: repeat(5, 40px);
-    grid-column-gap: 5px;
-    grid-row-gap: 10px;
+    grid-template-columns: repeat(2, 160px) repeat(3, 80px);
+    grid-template-rows: repeat(5, 80px);
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
     justify-content: stretch;
     align-items: stretch;
-    background-color: #191b28;
+    background-image: linear-gradient(to bottom, #4f4f4f, #404040, #323232, #252525, #181818);
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 2px 2px 20px #b4d0db50;
 }
 
 .div1 {
     grid-area: 1 / 1 / 2 / 3;
-    align-self: center;
 }
 
 .div2 {
@@ -145,9 +171,21 @@ input {
 }
 
 .pink {
-    background-color: #fb0066;
+    background-image: linear-gradient(to bottom, #00c8ff, #00baf0, #01ace2, #019ed3, #0091c4);
+}
+
+.grey{
+    background-image: linear-gradient(to bottom, #9f9f9f, #949494, #898989, #7f7f7f, #747474);
 }
 
 #mod{
-    font-size: 17px;
+    font-size: 24px;
+}
+
+#egal{
+    background-image: linear-gradient(to bottom, #ff9b00, #f08f00, #e18400, #d37900, #c46e00);
+}
+
+#clear{
+    background-image: linear-gradient(to bottom, #ff0000, #f00000, #e10000, #d20000, #c40000);
 }

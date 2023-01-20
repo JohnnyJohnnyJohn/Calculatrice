@@ -13,7 +13,7 @@ function clear() {
     resultat = false;
     onCalcul = false;
     virgule = false;
-    document.getElementById(operateur).className = "";
+    document.getElementById(operateur).className = "grey";
     operateur = "";
 }
 
@@ -65,7 +65,7 @@ function checkOp(id){
                 onCalcul = true;
                 isTyping = false;
             } else {
-                document.getElementById(operateur).className = "";
+                document.getElementById(operateur).className = "grey";
                 calcul(operateur);
                 operateur = "divise";
             }                    
@@ -80,7 +80,7 @@ function checkOp(id){
                 onCalcul = true;
                 isTyping = false;
             } else {
-                document.getElementById(operateur).className = "";
+                document.getElementById(operateur).className = "grey";
                 calcul(operateur);
                 operateur = "soustrait";
             }                    
@@ -95,7 +95,7 @@ function checkOp(id){
                 onCalcul = true;
                 isTyping = false;
             } else {
-                document.getElementById(operateur).className = "";
+                document.getElementById(operateur).className = "grey";
                 calcul(operateur);
                 operateur = "add";
             }                    
@@ -110,7 +110,7 @@ function checkOp(id){
                 onCalcul = true;
                 isTyping = false;
             } else {
-                document.getElementById(operateur).className = "";
+                document.getElementById(operateur).className = "grey";
                 calcul(operateur);
                 operateur = "fois";
             }                    
@@ -125,14 +125,14 @@ function checkOp(id){
                 onCalcul = true;
                 isTyping = false;
             } else {
-                document.getElementById(operateur).className = "";
+                document.getElementById(operateur).className = "grey";
                 calcul(operateur);
                 operateur = "mod";
             }                    
             break;
             
         default:
-            document.getElementById(operateur).className = "";
+            document.getElementById(operateur).className = "grey";
             calcul(operateur);
             operateur = "";
             onCalcul = false;
