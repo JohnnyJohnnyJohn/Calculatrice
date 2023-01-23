@@ -190,3 +190,35 @@ input {
 #clear{
     background-image: linear-gradient(to bottom, #ff0000, #f00000, #e10000, #d20000, #c40000);
 }
+
+@media(max-width:640px) {
+    * {
+        font-size: 16px;
+    }
+
+    .parent {
+        grid-template-columns: repeat(2, 80px) repeat(3, 40px);
+        grid-template-rows: repeat(5, 40px);
+        grid-column-gap: 2px;
+        grid-row-gap: 2px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    input {
+        font-size: 20px;
+        width: 96.5%;
+        padding: 8.5px 0;
+        text-align: right;
+        background-image: linear-gradient(to bottom, #72cb52, #6cbb4b, #65ac45, #5e9d3f, #578e39);
+        border-radius: 3px;
+        border-width: 0px;
+        padding-right: 5px;
+    }
+
+    #mod{
+        font-size: 14px;
+    }
+}
